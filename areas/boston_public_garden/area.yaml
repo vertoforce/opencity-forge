@@ -1,0 +1,62 @@
+# boston_public_garden: example area config in the `opencity new-area` layout; every class: hand entry gives its reason.
+# derive: true -> `opencity build` writes derived.yaml in the scratch dir and those
+# values become this area's knob defaults.  Put a hand override in knobs:
+# with value:, class: hand and reason:.  Box 206 x 199 m.
+# sources: local first, national fallback (README "Data sources and licences in full").
+schema_version: 2
+derive: true
+license: public
+area:
+  name: boston_public_garden
+  title: Boston Public Garden (west half) and Arlington St
+  bbox_wsen: [-71.0728, 42.353, -71.0703, 42.3548]
+  fetch_bbox_wsen: [-71.0728, 42.353, -71.0703, 42.3548]
+  origin: {lat: 42.3539, lon: -71.07155, alt_m: 2.997}
+  origin_provisional: false
+  crs_epsg: 32619
+  timezone: America/New_York
+  frame: 'lidar (no-mesh mode): NAVD88 heights about the origin'
+paths:
+  # ${ROOT} names a root defined in lib/opencity_paths.py (env OPENCITY_<ROOT>)
+  scratch_dir: ${WORK}/areas/boston_public_garden
+  work_dir: ${WORK}/areas/boston_public_garden/work
+  publish_name: opencity_boston_public_garden
+  W: ${WORK}/areas/boston_public_garden/work
+  CMB: ${WORK}/areas/boston_public_garden/fusion/boston_public_garden
+  G: ${WORK}/areas/boston_public_garden/fusion/boston_public_garden/geom
+  FW: ${WORK}/areas/boston_public_garden/fusion/boston_public_garden
+  CTX: ${WORK}/areas/boston_public_garden/src/boston_public_garden/context
+  SRCM: ${WORK}/areas/boston_public_garden/out/boston_public_garden
+  PANO: ${WORK}/areas/boston_public_garden/src/boston_public_garden
+  OUT: ${WORK}/areas/boston_public_garden/publish
+  KEEP: ${WORK}/areas/boston_public_garden/keep
+sources:
+  mapillary: {token_file: '${TOKEN_FILE}', max_panos: 300, licence: CC BY-SA 4.0}
+  lidar:
+    dataset: auto (OpenTopography / USGS 3DEP catalog)
+    licence: USGS 3DEP, public domain
+    local: []
+    fallback: usgs_3dep
+  osm: {licence: '(c) OpenStreetMap contributors, ODbL 1.0'}
+  ortho:
+    primary: naip
+    licence: USDA NAIP, public domain
+    endpoint: USGS National Map USGSNAIPImagery ImageServer
+    local: []
+    fallback: naip
+  trees:
+    local: []
+    fallback: lidar_crowns (USGS 3DEP CHM) + OSM natural=tree
+  props:
+    local: []
+    fallback: OSM + lidar poles + Mapillary detections
+build_mode: poses
+knobs: {}
+stage_knobs:
+  GROUND_COLOUR_TRANSFER:
+    value: {enabled: true}
+    class: hand
+    reason: 'per-class ortho colour transfer in nomesh_ground classes (haze level, luma gain, shadow gain all derived from this area''s ortho at run time; see the dict in nomesh_ground.py for the other keys). {enabled: false} uses clamp_pano_cells (panorama cells clamped to the ortho) instead.'
+  FACADE_PHOTO_QUALITY: {value: {seg_veto: true, min_cos: 0.5, measure: true}, class: hand, reason: 'see pipeline/facade_quality.py. Seg_veto: Mapillary segmentation not-wall pixels carry no facade colour; min_cos 0.5: no photo texel seen more edge-on than 60 deg'}
+  FACADE_DATA_COLOUR: {value: {enabled: true, k_parts: 5, r_m: 150.0}, class: hand, reason: 'see stages/s35_facadetex.py. An unphotographed wall takes the median colour of the 5 nearest photographed buildings, not the class-default grey'}
+  OBJECT_PLACEHOLDER_HIDE: {value: true, class: hand, reason: 'see stages/s85_object_place.py. Rows with no CC0 model stay tagged nodes and draw no cage/box'}

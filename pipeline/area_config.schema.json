@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "opencity-forge/area_config.schema.json",
+  "title": "Area config",
+  "description": "areas/<name>/area.yaml, schema_version 2, as pipeline/areacfg.py loads it. `opencity new-area` writes a complete example; areas/tucson_jacome/area.yaml is a filled one. Paths may use ${ROOT} templates (${WORK}, ${DATA}, ${TOKEN_FILE}) that pipeline/areacfg.py expands.",
+  "type": "object",
+  "required": ["area", "paths"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "derive": {"type": "boolean", "description": "true: `opencity build` writes derived.yaml into the scratch dir and those values become the area's knob defaults."},
+    "license": {"enum": ["private", "public"], "description": "public: no source marked restricted may feed the build, and `opencity publish` refuses a public tag when one did."},
+    "area": {
+      "type": "object",
+      "required": ["name", "bbox_wsen"],
+      "properties": {
+        "name": {"type": "string", "pattern": "^[a-z0-9_]+$", "description": "Used in work, scratch and publish dir names."},
+        "title": {"type": "string"},
+        "bbox_wsen": {"$ref": "#/$defs/bbox", "description": "Model extent, W, S, E, N (common.BBOX_WSEN)."},
+        "fetch_bbox_wsen": {"$ref": "#/$defs/bbox", "description": "Box passed to the fetch tools; default bbox_wsen."},
+        "origin": {
+          "type": "object",
+          "required": ["lat", "lon", "alt_m"],
+          "properties": {"lat": {"type": "number"}, "lon": {"type": "number"}, "alt_m": {"type": "number"}},
+          "description": "ENU origin (common.ORIGIN). Every metre coordinate of the build is relative to it."
+        },
+        "origin_provisional": {"type": "boolean", "description": "true until `pipeline/nomesh.py manifest` sets alt_m from the lidar ground."},
+        "crs_epsg": {"type": "integer", "description": "UTM zone of the box; the NAIP ortho is fetched in it."},
+        "timezone": {"type": "string", "description": "IANA zone; s19_delight reads Mapillary capture times in it."},
+        "frame": {"type": "string"}
+      }
+    },
+    "paths": {
+      "type": "object",
+      "description": "scratch_dir marks an area build. The upper-case keys override the matching common.py paths.",
+      "properties": {
+        "scratch_dir": {"type": "string"},
+        "work_dir": {"type": "string"},
+        "publish_name": {"type": "string", "description": "Dir name under OPENCITY_PUBLISH; may not start with '_'."},
+        "W": {"type": "string"}, "CMB": {"type": "string"}, "G": {"type": "string"}, "FW": {"type": "string"},
+        "CTX": {"type": "string"}, "SRCM": {"type": "string"}, "PANO": {"type": "string"},
+        "OUT": {"type": "string"}, "KEEP": {"type": "string"}
+      },
+      "additionalProperties": {"type": "string"}
+    },
+    "sources": {
+      "type": "object",
+      "description": "Local first, national fallback. Each input lists the local sources that cover the box and the fallback every stage can run on alone. A source block with `restricted: true` has terms that forbid redistribution or sale.",
+      "properties": {
+        "mapillary": {"type": "object", "description": "token_file is a PATH, never a token value; max_panos, pano_spacing_m, licence."},
+        "lidar": {"$ref": "#/$defs/source"},
+        "osm": {"$ref": "#/$defs/source"},
+        "ortho": {"$ref": "#/$defs/source", "description": "primary: naip, or the name of a local ortho whose tiles and source.json are placed in <scratch_dir>/ortho by hand."},
+        "trees": {"$ref": "#/$defs/source", "description": "city: a pipeline/city_trees.py CITIES name, or none; default picked from the box."},
+        "props": {"$ref": "#/$defs/source"},
+        "city_props": {"type": "string", "description": "A pipeline/city_props.py CITIES name (the registry ships empty; add an entry to use one), or none; default picked from the box."}
+      },
+      "not": {"anyOf": [{"required": ["token"]}, {"required": ["api_key"]}, {"required": ["password"]}]}
+    },
+    "registration": {
+      "type": "object",
+      "properties": {"yaw_deg": {"type": "number"}, "t": {"$ref": "#/$defs/xyz"}},
+      "description": "lidar -> photo frame (common.REG_YAW_DEG, REG_T)."
+    },
+    "build_mode": {"const": "poses"},
+    "knobs": {"type": "object", "additionalProperties": {"$ref": "#/$defs/knob"}, "description": "Overrides of common.py globals."},
+    "stage_knobs": {"type": "object", "additionalProperties": {"$ref": "#/$defs/knob"}, "description": "Knobs that live in stage modules."}
+  },
+  "$defs": {
+    "bbox": {"type": "array", "items": {"type": "number"}, "minItems": 4, "maxItems": 4},
+    "xyz": {"type": "array", "items": {"type": "number"}, "minItems": 3, "maxItems": 3},
+    "source": {
+      "type": "object",
+      "properties": {
+        "primary": {"type": "string"},
+        "licence": {"type": "string"},
+        "local": {"type": "array", "items": {"type": "string"}},
+        "fallback": {"type": "string"},
+        "restricted": {"type": "boolean"}
+      }
+    },
+    "knob": {
+      "type": "object",
+      "required": ["value", "reason"],
+      "properties": {
+        "value": {},
+        "class": {"enum": ["data", "hand", "derivable", "derived"]},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

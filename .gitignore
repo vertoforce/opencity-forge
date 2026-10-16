@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+# runtime output (OPENCITY_DATA, OPENCITY_WORK and log defaults); never committed
+/data/
+/work/
+/logs/
+# local denylist for tools/check_public.py; never committed
+.private-denylist

@@ -1,0 +1,360 @@
+{
+ "assets": {
+  "boat_row": {
+   "file": "boat_row.glb",
+   "nominal_size_m": [
+    4.337,
+    1.337,
+    4.5
+   ],
+   "facing": "+Z",
+   "source": "Kenney watercraft-kit",
+   "page_url": "https://kenney.nl/assets/watercraft-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "archive_sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/boat-row-large.glb",
+   "edits": [
+    "scaled uniformly x1.5778 so the long axis is 4.50 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "boat_sail": {
+   "file": "boat_sail.glb",
+   "nominal_size_m": [
+    4.261,
+    11.314,
+    9.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney watercraft-kit",
+   "page_url": "https://kenney.nl/assets/watercraft-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "archive_sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/boat-sail-a.glb",
+   "edits": [
+    "scaled uniformly x2.3873 so the long axis is 9.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "boat_speed": {
+   "file": "boat_speed.glb",
+   "nominal_size_m": [
+    3.178,
+    2.671,
+    6.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney watercraft-kit",
+   "page_url": "https://kenney.nl/assets/watercraft-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "archive_sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/boat-speed-a.glb",
+   "edits": [
+    "scaled uniformly x1.7804 so the long axis is 6.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "boat_tow": {
+   "file": "boat_tow.glb",
+   "nominal_size_m": [
+    5.646,
+    6.52,
+    12.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney watercraft-kit",
+   "page_url": "https://kenney.nl/assets/watercraft-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "archive_sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/boat-tow-a.glb",
+   "edits": [
+    "scaled uniformly x1.9600 so the long axis is 12.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "car_sedan": {
+   "file": "car_sedan.glb",
+   "nominal_size_m": [
+    2.647,
+    2.294,
+    4.5
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/sedan.glb",
+   "edits": [
+    "scaled uniformly x1.7647 so the long axis is 4.50 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "car_suv": {
+   "file": "car_suv.glb",
+   "nominal_size_m": [
+    2.667,
+    2.311,
+    4.8
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/suv.glb",
+   "edits": [
+    "scaled uniformly x1.7778 so the long axis is 4.80 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "car_taxi": {
+   "file": "car_taxi.glb",
+   "nominal_size_m": [
+    2.509,
+    2.509,
+    4.6
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/taxi.glb",
+   "edits": [
+    "scaled uniformly x1.6727 so the long axis is 4.60 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "car_van": {
+   "file": "car_van.glb",
+   "nominal_size_m": [
+    2.727,
+    2.455,
+    5.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/van.glb",
+   "edits": [
+    "scaled uniformly x1.8182 so the long axis is 5.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "delivery": {
+   "file": "delivery.glb",
+   "nominal_size_m": [
+    3.0,
+    3.3,
+    6.5
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/delivery.glb",
+   "edits": [
+    "scaled uniformly x2.0000 so the long axis is 6.50 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "jersey_barrier": {
+   "file": "jersey_barrier.glb",
+   "nominal_size_m": [
+    1.204,
+    1.156,
+    2.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney city-kit-roads",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/construction-barrier.glb",
+   "edits": [
+    "scaled uniformly x8.8889 so the long axis is 2.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "sign_board": {
+   "file": "sign_board.glb",
+   "nominal_size_m": [
+    0.232,
+    2.2,
+    0.232
+   ],
+   "facing": "+Z",
+   "source": "Kenney city-kit-roads",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/road-sign-empty.glb",
+   "edits": [
+    "scaled uniformly x4.6316 so the y axis is 2.20 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "traffic_cone": {
+   "file": "traffic_cone.glb",
+   "nominal_size_m": [
+    0.56,
+    0.7,
+    0.56
+   ],
+   "facing": "+Z",
+   "source": "Kenney city-kit-roads",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/construction-cone.glb",
+   "edits": [
+    "scaled uniformly x7.4667 so the y axis is 0.70 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "traffic_light": {
+   "file": "traffic_light.glb",
+   "nominal_size_m": [
+    0.913,
+    4.0,
+    0.699
+   ],
+   "facing": "+X",
+   "source": "Kenney city-kit-roads",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/traffic-light.glb",
+   "edits": [
+    "scaled uniformly x7.7670 so the y axis is 4.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "truck": {
+   "file": "truck.glb",
+   "nominal_size_m": [
+    3.559,
+    3.085,
+    7.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney car-kit",
+   "page_url": "https://kenney.nl/assets/car-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "archive_sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/truck.glb",
+   "edits": [
+    "scaled uniformly x2.3729 so the long axis is 7.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "utility_pole": {
+   "file": "utility_pole.glb",
+   "nominal_size_m": [
+    1.356,
+    9.0,
+    3.672
+   ],
+   "facing": "+Z",
+   "source": "Kenney city-kit-roads",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "License: (Creative Commons Zero, CC0)",
+   "original_mesh": "Models/GLB format/electricity-pole-single.glb",
+   "edits": [
+    "scaled uniformly x17.1429 so the y axis is 9.00 m",
+    "kit vertex colours / palette texture kept in COLOR_0 by s81 load_one",
+    "base dropped to y=0 and XZ centred by s81_prop_assets.bake"
+   ]
+  },
+  "planter": {
+   "file": "planter.glb",
+   "nominal_size_m": [
+    1.2,
+    0.85,
+    1.2
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives by lib/objects/objassets.py",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": null,
+   "edits": [
+    "built from boxes"
+   ]
+  },
+  "utility_cabinet": {
+   "file": "utility_cabinet.glb",
+   "nominal_size_m": [
+    1.0,
+    1.17,
+    0.6
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives by lib/objects/objassets.py",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": null,
+   "edits": [
+    "built from boxes"
+   ]
+  }
+ },
+ "kits": {
+  "car-kit": {
+   "url": "https://kenney.nl/media/pages/assets/car-kit/1a312ec241-1775131960/kenney_car-kit.zip",
+   "page": "https://kenney.nl/assets/car-kit",
+   "zip": "kenney_car-kit.zip",
+   "sha256": "fac7dacac5c7874348cf19729af3ef205f3d366493edaf0a827d93f4fdf3d0c4"
+  },
+  "watercraft-kit": {
+   "url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "page": "https://kenney.nl/assets/watercraft-kit",
+   "zip": "kenney_watercraft-pack.zip",
+   "sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3"
+  },
+  "city-kit-roads": {
+   "url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "page": "https://kenney.nl/assets/city-kit-roads",
+   "zip": "kenney_city-kit-roads.zip",
+   "sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e"
+  }
+ }
+}

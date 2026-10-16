@@ -1,0 +1,25 @@
+# Python dependencies of every module in this repo (Python 3.11).
+# Versions are the ones the pipeline was tested with.
+affine==3.0.1
+laspy==2.7.0
+mapbox-vector-tile==2.2.0
+mercantile==1.2.1
+numpy==2.4.6
+opencv-python-headless==5.0.0.93
+pillow==12.3.0
+PyOpenGL==3.1.0
+pyproj==3.7.2
+pyrender==0.1.45
+pytest==9.1.1
+PyYAML==6.0.3
+rasterio==1.4.4
+requests==2.34.2
+scipy==1.17.1
+shapely==2.1.2
+timezonefinder==9.0.0
+trimesh==5.1.0
+# trimesh optional features the stages use (polygon triangulation, nearest queries, decimation, Draco)
+DracoPy==2.1.0
+fast_simplification==0.2.0
+mapbox_earcut==2.1.0
+rtree==1.4.1

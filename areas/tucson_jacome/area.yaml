@@ -1,0 +1,67 @@
+# tucson_jacome: example area config in the `opencity new-area` layout; every class: hand entry gives its reason.
+# derive: true -> `opencity build` writes derived.yaml in the scratch dir and those
+# values become this area's knob defaults.  Put a hand override in knobs:
+# with value:, class: hand and reason:.  Box 198 x 199 m.
+schema_version: 2
+derive: true
+license: public
+area:
+  name: tucson_jacome
+  title: Jacome Plaza and El Presidio, Tucson
+  bbox_wsen: [-110.975, 32.2206, -110.9729, 32.2224]
+  fetch_bbox_wsen: [-110.975, 32.2206, -110.9729, 32.2224]
+  origin: {lat: 32.2215, lon: -110.97395, alt_m: 721.648}
+  origin_provisional: false
+  crs_epsg: 32612
+  timezone: America/Phoenix
+  frame: 'lidar (no-mesh mode): NAVD88 heights about the origin'
+paths:
+  # ${ROOT} names a root defined in lib/opencity_paths.py (env OPENCITY_<ROOT>)
+  scratch_dir: ${WORK}/areas/tucson_jacome
+  work_dir: ${WORK}/areas/tucson_jacome/work
+  publish_name: opencity_tucson_jacome
+  W: ${WORK}/areas/tucson_jacome/work
+  CMB: ${WORK}/areas/tucson_jacome/fusion/tucson_jacome
+  G: ${WORK}/areas/tucson_jacome/fusion/tucson_jacome/geom
+  FW: ${WORK}/areas/tucson_jacome/fusion/tucson_jacome
+  CTX: ${WORK}/areas/tucson_jacome/src/tucson_jacome/context
+  SRCM: ${WORK}/areas/tucson_jacome/out/tucson_jacome
+  PANO: ${WORK}/areas/tucson_jacome/src/tucson_jacome
+  OUT: ${WORK}/areas/tucson_jacome/publish
+  KEEP: ${WORK}/areas/tucson_jacome/keep
+sources:
+  mapillary: {token_file: '${TOKEN_FILE}', max_panos: 300, licence: CC BY-SA 4.0}
+  lidar:
+    dataset: auto (OpenTopography / USGS 3DEP catalog)
+    licence: USGS 3DEP, public domain
+    local: []
+    fallback: usgs_3dep
+  osm: {licence: '(c) OpenStreetMap contributors, ODbL 1.0'}
+  ortho:
+    primary: naip
+    licence: USDA NAIP, public domain
+    endpoint: USGS National Map USGSNAIPImagery ImageServer
+    local: []
+    fallback: naip
+  trees:
+    local: []
+    fallback: lidar_crowns (USGS 3DEP CHM) + OSM natural=tree
+  props:
+    local: []
+    fallback: OSM + lidar poles + Mapillary detections
+build_mode: poses
+knobs:
+  GROUND_EDGE_FILL: {value: null, class: hand, reason: 'off in poses mode: the s22 lawn fill lowers lawn saturation (0.27 -> 0.23 on this area), and nomesh_ground classes already fills unseen lawn from seen lawn'}
+  GROUND_CANOPY_FILL: {value: null, class: hand, reason: 'see GROUND_EDGE_FILL'}
+  GROUND_SHADE_FILL: {value: null, class: hand, reason: 'see GROUND_EDGE_FILL'}
+stage_knobs:
+  GROUND_SAT_CAP: {value: {from_ortho: true}, class: hand, reason: 's22 SAT_CAP per class raised to the p95 linear sat of the class''s lit ortho cells (written by nomesh_ground classes to <scratch_dir>/texture/polish/nomesh_sat_cap.json); fixed per-class caps clip a bright sand class (0.288 -> 0.225)'}
+  GROUND_RAW_CLIP_MIN: {value: 0.004, class: hand, reason: 's22 tint/M floor at 1/255 instead of 0.03: 30 % of Tucson lit-lawn vertices have a channel under 0.03, and a 0.03 floor erases their hue'}
+  GROUND_TILE_CONTRAST: {value: {ratio: 2.5, k_min: 0.4}, class: hand, reason: 'tile detail finer than the ortho pixel scaled to the ortho''s finest-band sd where the tile''s is over ratio x it (<scratch_dir>/texture/polish/nomesh_tile_contrast.json, written by nomesh_ground classes)'}
+  GROUND_COLOUR_TRANSFER:
+    value: {enabled: true}
+    class: hand
+    reason: 'per-class ortho colour transfer in nomesh_ground classes (haze level, luma gain, shadow gain all derived from this area''s ortho at run time; see the dict in nomesh_ground.py for the other keys). {enabled: false} uses clamp_pano_cells (panorama cells clamped to the ortho) instead.'
+  FACADE_PHOTO_QUALITY: {value: {seg_veto: true, min_cos: 0.5, measure: true, fallback: {k_views: 4, min_cos: 0.45, unowned: true, align_unvetoed: true}}, class: hand, reason: 'see pipeline/facade_quality.py. Fallback: a vetoed texel takes the next-best aligned panorama before material. seg_veto: Mapillary segmentation not-wall pixels carry no facade colour; min_cos 0.5: no photo texel seen more edge-on than 60 deg'}
+  FACADE_DATA_COLOUR: {value: {enabled: true, k_parts: 5, r_m: 150.0}, class: hand, reason: 'see stages/s35_facadetex.py. An unphotographed wall takes the median colour of the 5 nearest photographed buildings, not the class-default grey'}
+  OBJECT_PLACEHOLDER_HIDE: {value: true, class: hand, reason: 'see stages/s85_object_place.py. Rows with no CC0 model stay tagged nodes and draw no cage/box'}

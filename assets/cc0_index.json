@@ -1,0 +1,188 @@
+{
+ "materials": {
+  "lawn": {
+   "source": "ambientCG",
+   "asset_id": "Grass004",
+   "title": "Grass 004",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Grass004",
+   "download_url": "https://ambientcg.com/get?file=Grass004_2K-JPG.zip",
+   "files": {
+    "color": "Grass004_2K-JPG_Color.jpg",
+    "normal": "Grass004_2K-JPG_NormalGL.jpg",
+    "roughness": "Grass004_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "d7d3f08e8bb1e59aed0c3dbb85ea0b46d5308481f89b6a3fd62c0ec9e862245b"
+  },
+  "paving": {
+   "source": "ambientCG",
+   "asset_id": "PavingStones070",
+   "title": "Paving Stones 070",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=PavingStones070",
+   "download_url": "https://ambientcg.com/get?file=PavingStones070_2K-JPG.zip",
+   "files": {
+    "color": "PavingStones070_2K-JPG_Color.jpg",
+    "normal": "PavingStones070_2K-JPG_NormalGL.jpg",
+    "roughness": "PavingStones070_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "0fb428c7d92b166185a3a2b2223f9dd0f26629146342416bcb823e94350f17e7"
+  },
+  "concrete": {
+   "source": "ambientCG",
+   "asset_id": "Concrete047A",
+   "title": "Concrete 047 A",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Concrete047A",
+   "download_url": "https://ambientcg.com/get?file=Concrete047A_2K-JPG.zip",
+   "files": {
+    "color": "Concrete047A_2K-JPG_Color.jpg",
+    "normal": "Concrete047A_2K-JPG_NormalGL.jpg",
+    "roughness": "Concrete047A_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "4f537fe5e9416f29b9b16005f4d9011487564402da4872a3c1267655523606af"
+  },
+  "asphalt": {
+   "source": "ambientCG",
+   "asset_id": "Asphalt012",
+   "title": "Asphalt 012",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Asphalt012",
+   "download_url": "https://ambientcg.com/get?file=Asphalt012_2K-JPG.zip",
+   "files": {
+    "color": "Asphalt012_2K-JPG_Color.jpg",
+    "normal": "Asphalt012_2K-JPG_NormalGL.jpg",
+    "roughness": "Asphalt012_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "9a1265d8c1ab367560e378c2a8a9641bf4af84cd50bda6d13fb85c41abd48a92"
+  },
+  "gravel": {
+   "source": "ambientCG",
+   "asset_id": "Gravel023",
+   "title": "Gravel 023",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Gravel023",
+   "download_url": "https://ambientcg.com/get?file=Gravel023_2K-JPG.zip",
+   "files": {
+    "color": "Gravel023_2K-JPG_Color.jpg",
+    "normal": "Gravel023_2K-JPG_NormalGL.jpg",
+    "roughness": "Gravel023_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "a6dd0aea7bcda95d6373c823734eda0cfa066e34c0eea9e1e07023926021bab5"
+  },
+  "sand": {
+   "source": "ambientCG",
+   "asset_id": "Ground054",
+   "title": "Ground 054",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Ground054",
+   "download_url": "https://ambientcg.com/get?file=Ground054_2K-JPG.zip",
+   "files": {
+    "color": "Ground054_2K-JPG_Color.jpg",
+    "normal": "Ground054_2K-JPG_NormalGL.jpg",
+    "roughness": "Ground054_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "643e7c8689bac041f17c660eff6a5459bfe0535d4466737beb0e64902b23235a"
+  },
+  "wood_deck": {
+   "source": "ambientCG",
+   "asset_id": "Planks020",
+   "title": "Planks 020",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Planks020",
+   "download_url": "https://ambientcg.com/get?file=Planks020_2K-JPG.zip",
+   "files": {
+    "color": "Planks020_2K-JPG_Color.jpg",
+    "normal": "Planks020_2K-JPG_NormalGL.jpg",
+    "roughness": "Planks020_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "9bb3b5029d62351d2651d5a0d0166b35ca668922383d9ba10f10a7ad077190ca"
+  },
+  "metal": {
+   "source": "ambientCG",
+   "asset_id": "Metal032",
+   "title": "Metal 032",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Metal032",
+   "download_url": "https://ambientcg.com/get?file=Metal032_2K-JPG.zip",
+   "files": {
+    "color": "Metal032_2K-JPG_Color.jpg",
+    "normal": "Metal032_2K-JPG_NormalGL.jpg",
+    "roughness": "Metal032_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "4b8884843c490963d5734be036c35639d064e7a817eb61145322f69c6c19895a"
+  },
+  "brick": {
+   "source": "ambientCG",
+   "asset_id": "Bricks066",
+   "title": "Bricks 066",
+   "licence": "CC0 1.0",
+   "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+   "page_url": "https://ambientcg.com/view?id=Bricks066",
+   "download_url": "https://ambientcg.com/get?file=Bricks066_2K-JPG.zip",
+   "files": {
+    "color": "Bricks066_2K-JPG_Color.jpg",
+    "normal": "Bricks066_2K-JPG_NormalGL.jpg",
+    "roughness": "Bricks066_2K-JPG_Roughness.jpg"
+   },
+   "px": [
+    2048,
+    2048
+   ],
+   "sha256": "e222fb95833a62de538ff2251cad13055ca459a3145b824cfd4344673aead9ab"
+  }
+ },
+ "extra": {
+  "polyhaven_sparse_grass": {
+   "source": "Poly Haven",
+   "asset_id": "sparse_grass",
+   "licence": "CC0 1.0",
+   "page_url": "https://polyhaven.com/a/sparse_grass",
+   "base_url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/sparse_grass/",
+   "files": [
+    "sparse_grass_diff_4k.jpg",
+    "sparse_grass_nor_gl_4k.jpg"
+   ]
+  }
+ }
+}

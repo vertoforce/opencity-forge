@@ -1,0 +1,13 @@
+#!/bin/sh
+# Refuse a push while the public-release gate reports a hit: in the working tree, in the file
+# tree of every commit being pushed and its history, and in those commits' author, committer,
+# UTC dates and message.  The denylist must be present.
+# Enable once per clone: git config core.hooksPath .githooks
+root=$(git rev-parse --show-toplevel) || exit 1
+revs=""
+while read -r lref lsha rref rsha; do
+  case "$lsha" in 0000000000000000000000000000000000000000) ;; *) revs="$revs $lsha" ;; esac
+done
+[ -n "$revs" ] || revs=HEAD
+# shellcheck disable=SC2086
+exec python3 "$root/tools/check_public.py" --root "$root" --quiet --require-denylist --commits $revs --trees $revs

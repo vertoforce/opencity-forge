@@ -1,0 +1,247 @@
+{
+ "assets": {
+  "bench": {
+   "file": "bench.glb",
+   "triangles": 160,
+   "nominal_size_m": [
+    1.8,
+    1.173,
+    1.015
+   ],
+   "facing": "+Z",
+   "source": "Kenney Graveyard Kit 5.0",
+   "page_url": "https://kenney.nl/assets/graveyard-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/graveyard-kit/ba8d4b4517-1760691807/kenney_graveyard-kit_5.0.zip",
+   "archive_sha256": "1a93613f2e5675f3310acf49ec9ef13ae7adeb756ac3b205bfb6cc9311a81062",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLB format/bench.glb",
+   "edits": [
+    "scaled uniformly x2.2301 to 1.8 m along X",
+    "backrest already sits on -Z so the seat faces +Z",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "lamp_post": {
+   "file": "lamp_post.glb",
+   "triangles": 92,
+   "nominal_size_m": [
+    0.37,
+    5.0,
+    1.667
+   ],
+   "facing": "+Z",
+   "source": "Kenney City Kit (Roads) 2.1",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLB format/light-curved.glb",
+   "edits": [
+    "scaled uniformly x7.4074 to 5.0 m along Y",
+    "rotated 180 deg about Y so it faces +Z",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on the pole at its base"
+   ]
+  },
+  "trash_can": {
+   "file": "trash_can.glb",
+   "triangles": 68,
+   "nominal_size_m": [
+    0.485,
+    1.0,
+    0.547
+   ],
+   "facing": "+Z",
+   "source": "Kenney Furniture Kit 1.0",
+   "page_url": "https://kenney.nl/assets/furniture-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/furniture-kit/440e0608a4-1677580847/kenney_furniture-kit.zip",
+   "archive_sha256": "e67652d0932cee41683f74711c03d3e192a2af9979ef8e6b237711f5482d46b0",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLTF format/trashcan.glb",
+   "edits": [
+    "scaled uniformly x2.3372 to 1.0 m along Y",
+    "two flat-colour materials (metal, metalDark) merged into one vertex-coloured primitive",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "sign_post": {
+   "file": "sign_post.glb",
+   "triangles": 154,
+   "nominal_size_m": [
+    1.033,
+    2.5,
+    1.033
+   ],
+   "facing": "+Z",
+   "source": "Kenney City Kit (Roads) 2.1",
+   "page_url": "https://kenney.nl/assets/city-kit-roads",
+   "download_url": "https://kenney.nl/media/pages/assets/city-kit-roads/74288c9459-1787042796/kenney_city-kit-roads.zip",
+   "archive_sha256": "22058af3d68173a7cf9bda9f0e243a8cef6bd68168c302ebc76327063849674e",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLB format/road-sign-street.glb",
+   "edits": [
+    "scaled uniformly x5.2632 to 2.5 m along Y",
+    "street-name blade already reads from +Z",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on the pole at its base"
+   ]
+  },
+  "flagpole": {
+   "file": "flagpole.glb",
+   "triangles": 144,
+   "nominal_size_m": [
+    0.887,
+    8.0,
+    2.973
+   ],
+   "facing": "+Z",
+   "source": "Kenney Pirate Kit 2.1",
+   "page_url": "https://kenney.nl/assets/pirate-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/pirate-kit/e6d4bb1525-1771333093/kenney_pirate-kit.zip",
+   "archive_sha256": "667ed2caf92954ddb98f7b7cede831fe99ab75063c26b25e23d32715bee9c943",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLB format/flag-high.glb",
+   "edits": [
+    "scaled uniformly x2.2242 to 8.0 m along Y",
+    "flag hangs off the pole, pole is the base footprint",
+    "rotated -90 deg about Y so it faces +Z",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on the pole at its base"
+   ]
+  },
+  "small_boat": {
+   "file": "small_boat.glb",
+   "triangles": 178,
+   "nominal_size_m": [
+    2.09,
+    1.459,
+    5.0
+   ],
+   "facing": "+Z",
+   "source": "Kenney Watercraft Pack",
+   "page_url": "https://kenney.nl/assets/watercraft-kit",
+   "download_url": "https://kenney.nl/media/pages/assets/watercraft-kit/a335cfed49-1713519620/kenney_watercraft-pack.zip",
+   "archive_sha256": "cd1470c1cf441c7f46d0944ae6d0d897242365dc97677c5079b3238965d659f3",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- \"License: (Creative Commons Zero, CC0) http://creativecommons.org/publicdomain/zero/1.0/\" from License.txt inside the kit",
+   "original_mesh": "Models/GLB format/boat-speed-j.glb",
+   "edits": [
+    "scaled uniformly x1.1710 to 5.0 m along Z",
+    "bow already points +Z (hull tapers to 0.78 at +Z, transom at -Z)",
+    "kit palette texture (Textures/colormap.png, 512x512) sampled per vertex into COLOR_0 as sRGB bytes and dropped; the GLB ships with no texture and one primitive",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "picnic_table": {
+   "file": "picnic_table.glb",
+   "triangles": 288,
+   "nominal_size_m": [
+    1.5,
+    0.75,
+    1.8
+   ],
+   "facing": "+Z",
+   "source": "Poly Haven -- \"Wooden Picnic Table\" by Ulan Cabanilla",
+   "page_url": "https://polyhaven.com/a/wooden_picnic_table",
+   "download_url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_picnic_table/wooden_picnic_table_1k.gltf",
+   "archive_sha256": "6b0dd9916fd87dba2e5baad06e20c0badf68bc68a5761a13854fa9a215c6bd50 (wooden_picnic_table_1k.gltf); 1efd51c292843194fbd709452d56d06c9ddc770f43a013db57ca79bfc2731b01 (wooden_picnic_table.bin)",
+   "licence": "CC0 1.0 Universal (Creative Commons Zero) -- Poly Haven publishes every model under CC0, https://polyhaven.com/license",
+   "original_mesh": "wooden_picnic_table (Cube.003 + Cube.003_1)",
+   "edits": [
+    "10210 tris in 94 disconnected bodies; each of the 24 bodies over 0.1 m across swapped for its oriented bounding box (volume fill 0.72-1.00), 70 nail-head bodies dropped -> 288 tris",
+    "two 1024x1024 PBR material sets sampled to flat vertex colours, textures dropped",
+    "native size is 2.241 x 0.746 x 3.022 m (an 8-seat table); scaled x0.669 X, x1.005 Y, x0.596 Z to the 1.8 m nominal -- a uniform scale to 1.8 m long would have left it 0.44 m tall",
+    "symmetric: facing +Z is nominal",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "bollard": {
+   "file": "bollard.glb",
+   "triangles": 176,
+   "nominal_size_m": [
+    0.23,
+    1.0,
+    0.23
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives; the GLB itself is the source",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": "trimesh primitives (cylinders, boxes and caps)",
+   "edits": [
+    "scaled uniformly x1.0020 to 1.0 m along Y",
+    "upright steel bollard, radially symmetric: facing +Z is nominal",
+    "flat vertex colours, no texture",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "mooring_post": {
+   "file": "mooring_post.glb",
+   "triangles": 248,
+   "nominal_size_m": [
+    0.402,
+    1.2,
+    0.392
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives; the GLB itself is the source",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": "trimesh primitives (cylinders, boxes and caps)",
+   "edits": [
+    "scaled uniformly x1.0042 to 1.2 m along Y",
+    "cast-iron dock bollard, radially symmetric: facing +Z is nominal",
+    "flat vertex colours, no texture",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "railing_segment": {
+   "file": "railing_segment.glb",
+   "triangles": 156,
+   "nominal_size_m": [
+    2.0,
+    1.1,
+    0.09
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives; the GLB itself is the source",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": "trimesh primitives (cylinders, boxes and caps)",
+   "edits": [
+    "built at 2.0 m x 1.1 m directly, no scaling; rail plane is X-Y so the segment runs along X and faces +Z",
+    "flat vertex colours, no texture",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  },
+  "bike_rack": {
+   "file": "bike_rack.glb",
+   "triangles": 528,
+   "nominal_size_m": [
+    2.0,
+    0.922,
+    0.054
+   ],
+   "facing": "+Z",
+   "source": "original model built from trimesh primitives; the GLB itself is the source",
+   "page_url": null,
+   "download_url": null,
+   "archive_sha256": null,
+   "licence": "CC0 1.0, original model, no third-party asset",
+   "original_mesh": "trimesh primitives (cylinders, boxes and caps)",
+   "edits": [
+    "scaled uniformly x0.9728 to 2.0 m along X",
+    "three inverted-U staple hoops in the X-Y plane; hoop plane is X-Y so the rack runs along X and its open sides face +/-Z",
+    "flat vertex colours, no texture",
+    "base dropped to y=0, XZ centred on its footprint bounding box"
+   ]
+  }
+ }
+}

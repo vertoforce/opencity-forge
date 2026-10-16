@@ -1,0 +1,28 @@
+# Test fixture: a tiny synthetic area (has paths.scratch_dir).  @SCRATCH@ is
+# replaced with a pytest tmp dir by tests/conftest.py; nothing here points at real data.
+schema_version: 2
+derive: true
+license: private
+area:
+  name: test_area
+  title: Test area (synthetic)
+  bbox_wsen: [-122.4010, 37.7920, -122.4000, 37.7928]
+  origin: {lat: 37.7924, lon: -122.4005, alt_m: 5.0}
+  crs_epsg: 32610
+  timezone: America/Los_Angeles
+paths: {scratch_dir: '@SCRATCH@', work_dir: '@SCRATCH@/work', publish_name: opencity_test_area,
+  W: '@SCRATCH@/work', CMB: '@SCRATCH@/fusion', G: '@SCRATCH@/fusion/geom', FW: '@SCRATCH@/fusion',
+  CTX: '@SCRATCH@/src/context', SRCM: '@SCRATCH@/out', PANO: '@SCRATCH@/src', OUT: '@SCRATCH@/publish',
+  KEEP: '@SCRATCH@/keep'}
+sources:
+  ortho: {primary: naip}
+  trees: {city: san_francisco}
+build_mode: poses
+knobs: {}
+stage_knobs:
+  GROUND_COLOUR_TRANSFER: {value: {enabled: false, haze_pct: 1.5}, class: hand, reason: test}
+  GROUND_RAW_CLIP_MIN: {value: 0.07, class: hand, reason: test}
+  FACADE_PHOTO_QUALITY: {value: {seg_veto: true, min_cos: 0.5, measure: true}, class: hand, reason: test}
+  FACADE_DATA_COLOUR: {value: {enabled: true, k_parts: 5, r_m: 150.0}, class: hand, reason: test}
+  OBJECT_PLACEHOLDER_HIDE: {value: true, class: hand, reason: test}
+  WATER_MAX_RISE_M: {value: 2.5, class: hand, reason: test}
